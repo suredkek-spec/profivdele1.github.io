@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS profivdele_orders DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE profivdele_orders;
+
+CREATE TABLE IF NOT EXISTS orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(255) NOT NULL,
+    user_phone VARCHAR(50) NOT NULL,
+    user_message TEXT DEFAULT NULL,
+    calc_area VARCHAR(20) DEFAULT NULL,
+    calc_type VARCHAR(20) DEFAULT NULL,
+    calc_price VARCHAR(20) DEFAULT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профи в Деле — строительная компания в Калининграде</title>
+    <link rel="stylesheet" href="css/main.css?v=5">
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .burger { display: none !important; }
+        .nav-item { display: list-item !important; }
+        .contacts-overlay { position: fixed; inset: 0; z-index: 100000; opacity: 0; visibility: hidden; pointer-events: none; }
+        .contacts-overlay.active { opacity: 1; visibility: visible; pointer-events: auto; }
+        @media (max-width: 767px) { .nav-item { display: none !important; } .burger { display: block !important; } header .theme-toggle { display: none !important; } }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="header-container" id="header">
+        <div class="header-logo">
+            <img src="img/profivdele-Photoroom.png" alt="Профи в деле">
+            <span class="logo-text">Профи в <span>Деле</span></span>
+        </div>
+        <nav>
+            <ul>
+                <li class="phone-item">
+                    <a href="tel:+79005633555"><i class="fa-solid fa-phone"></i> +7 (900) 563-35-55</a>
+                </li>
+                <li class="nav-item"><a class="active" href="index.html">Главная</a></li>
+                <li class="nav-item"><a href="about.html">О нас</a></li>
+                <li class="nav-item"><a class="btn" href="#" data-contacts onclick="window.openContacts(event)">Контакты</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Переключить тему"><i class="fa-regular fa-moon"></i></button></li>
+                <li><button class="burger" id="burgerToggle" aria-label="Меню"><i class="fa-solid fa-bars"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient g1"></div>
+            <div class="hero-gradient g2"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Работаем в Калининграде с 2000 года
+            </div>
+            <h1>Строим дома,<br>которыми <span class="highlight">гордятся</span></h1>
+            <p>Полный цикл строительных и отделочных работ — от фундамента до дизайнерского ремонта «под ключ». Честность, сроки, качество.</p>
+            <div class="hero-actions">
+                <a href="#calculator" class="btn-primary">
+                    Рассчитать стоимость <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#services" class="btn-secondary">
+                    Наши услуги <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <h3><span class="counter" data-target="24">0</span><span class="accent">+</span></h3>
+                    <p>Лет на рынке</p>
+                </div>
+                <div class="hero-stat">
+                    <h3><span class="counter" data-target="150">0</span><span class="accent">+</span></h3>
+                    <p>Построенных объектов</p>
+                </div>
+                <div class="hero-stat">
+                    <h3><span class="counter" data-target="98">0</span><span class="accent">%</span></h3>
+                    <p>Довольных клиентов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section" style="padding-top:0;">
+        <div class="stats-grid" style="margin-top:-40px;">
+            <div class="stat-card fade-up">
+                <div class="number"><span class="counter" data-target="24">0</span><span class="accent">+</span></div>
+                <p class="label">Лет опыта</p>
+            </div>
+            <div class="stat-card fade-up">
+                <div class="number"><span class="counter" data-target="150">0</span><span class="accent">+</span></div>
+                <p class="label">Готовых объектов</p>
+            </div>
+            <div class="stat-card fade-up">
+                <div class="number"><span class="counter" data-target="12">0</span><span class="accent">+</span></div>
+                <p class="label">Сотрудников в штате</p>
+            </div>
+            <div class="stat-card fade-up">
+                <div class="number"><span class="counter" data-target="5">0</span><span class="accent"> лет</span></div>
+                <p class="label">Гарантия на работы</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" style="padding-bottom:0;">
+        <div class="section-header fade-up">
+            <div class="section-badge"><i class="fa-solid fa-arrow-right-arrow-left"></i> Процесс</div>
+            <h2>Как мы работаем</h2>
+            <p>Прозрачный процесс на каждом этапе — от замера до сдачи объекта.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step fade-up">
+                <div class="process-number">01</div>
+                <h3>Заявка и замер</h3>
+                <p>Оставляете заявку — мы бесплатно выезжаем на объект, делаем замеры и обсуждаем пожелания.</p>
+            </div>
+            <div class="process-step fade-up">
+                <div class="process-number">02</div>
+                <h3>Смета и договор</h3>
+                <p>Готовим детальную смету без скрытых платежей. Подписываем прозрачный договор с фиксированной стоимостью.</p>
+            </div>
+            <div class="process-step fade-up">
+                <div class="process-number">03</div>
+                <h3>Строительство</h3>
+                <p>Работаем строго по графику. Еженедельные отчёты с фото. Контроль качества на каждом этапе.</p>
+            </div>
+            <div class="process-step fade-up">
+                <div class="process-number">04</div>
+                <h3>Сдача объекта</h3>
+                <p>Принимаете работу — подписываете акт. Даём гарантию до 5 лет на все виды работ.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" style="padding-bottom:0;">
+        <div class="section-header fade-up">
+            <div class="section-badge"><i class="fa-solid fa-briefcase"></i> Услуги</div>
+            <h2>Что мы делаем</h2>
+            <p>Каждый проект ведёт персональный прораб. Работаем только с проверенными материалами и по ГОСТ.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card service-card-bg fade-up">
+                <div class="service-bg" style="background-image:url('img/Ремонт.jpeg');"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <h3>Отделка домов под ключ</h3>
+                    <p>Полный комплекс работ по внутренней и внешней отделке загородных домов. От черновой отделки до чистовой.</p>
+                    <div class="service-tag popular">Популярное</div>
+                </div>
+            </div>
+            <div class="service-card service-card-bg fade-up">
+                <div class="service-bg" style="background-image:url('img/house2.webp');"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                    <h3>Ремонт квартир под ключ</h3>
+                    <p>Косметический, капитальный и дизайнерский ремонт квартир. Без посредников, с гарантией и строго по срокам.</p>
+                    <div class="service-tag popular">Популярное</div>
+                </div>
+            </div>
+            <div class="service-card service-card-bg fade-up">
+                <div class="service-bg" style="background-image:url('img/house3.png');"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Фундамент под ключ</h3>
+                    <p>Ленточный, плитный, свайный фундамент. Расчёт нагрузки, гидроизоляция и утепление.</p>
+                    <span class="service-link">Подробнее <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+            <div class="service-card service-card-bg fade-up">
+                <div class="service-bg" style="background-image:url('img/house4.png');"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <div class="service-icon"><i class="fa-solid fa-fire"></i></div>
+                    <h3>Тёплый пол под ключ</h3>
+                    <p>Водяные и электрические системы тёплого пола. Монтаж, настройка, гарантийное обслуживание.</p>
+                    <span class="service-link">Подробнее <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+            <div class="service-card service-card-bg fade-up">
+                <div class="service-bg" style="background-image:url('img/photo1.png');"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h3>Дизайн-проекты</h3>
+                    <p>Индивидуальный дизайн-проект с 3D-визуализацией, подбором материалов и полным авторским надзором.</p>
+                    <div class="service-tag new">NEW</div>
+                </div>
+            </div>
+            <div class="service-card service-card-bg fade-up">
+                <div class="service-bg" style="background-image:url('img/photo2.png');"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
+                    <h3>Ландшафтный дизайн</h3>
+                    <p>Благоустройство участка: дорожки, газоны, освещение, зоны отдыха. Всё для комфортной жизни на природе.</p>
+                    <span class="service-link">Подробнее <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="section" id="calculator" style="background: var(--bg-secondary);">
+        <div class="section-header fade-up">
+            <div class="section-badge"><i class="fa-solid fa-calculator"></i> Калькулятор</div>
+            <h2>Рассчитайте стоимость ремонта</h2>
+            <p>Введите площадь помещения и выберите тип отделки — получите ориентировочную стоимость работ.</p>
+        </div>
+        <div class="calculator-section">
+            <div class="calc-card fade-up">
+                <h3>Площадь помещения</h3>
+                <div class="calc-input-group">
+                    <input type="number" id="areaInput" min="1" max="10000" value="50" placeholder="45">
+                    <span class="unit">м²</span>
+                </div>
+                <div style="margin-top:10px;font-size:13px;color:var(--text-muted);" id="areaBracket">Диапазон: 30–40 м²</div>
+            </div>
+            <div class="calc-card fade-up">
+                <h3>Тип ремонта</h3>
+                <div class="calc-options" id="typeOptions">
+                    <label class="calc-option selected" data-type="econom" data-rate="5000">
+                        <input type="radio" name="repair" value="econom" checked>
+                        <span class="calc-option-title">Эконом</span>
+                        <span class="calc-option-desc">от 5 000 ₽/м²</span>
+                    </label>
+                    <label class="calc-option" data-type="standard" data-rate="9000">
+                        <input type="radio" name="repair" value="standard">
+                        <span class="calc-option-title">Стандарт</span>
+                        <span class="calc-option-desc">от 9 000 ₽/м²</span>
+                    </label>
+                    <label class="calc-option" data-type="design" data-rate="15000">
+                        <input type="radio" name="repair" value="design">
+                        <span class="calc-option-title">Дизайнерский</span>
+                        <span class="calc-option-desc">от 15 000 ₽/м²</span>
+                    </label>
+                </div>
+            </div>
+            <div class="calc-result fade-up">
+                <div class="calc-result-label">Ориентировочная стоимость работ</div>
+                <div class="calc-result-price" id="calcPrice">450 000 ₽</div>
+                <div class="calc-result-desc">* Точная стоимость после выезда замерщика. Включает материалы и работу.</div>
+            </div>
+            <div class="calc-form fade-up">
+                <form action="send_order.php" method="POST" class="request-form" id="calcForm">
+                    <input type="hidden" name="calc_area" id="hiddenArea" value="">
+                    <input type="hidden" name="calc_type" id="hiddenType" value="">
+                    <input type="hidden" name="calc_price" id="hiddenPrice" value="">
+                    <input type="hidden" name="is_calculator" value="1">
+                    <input type="text" name="user_name" placeholder="Как к вам обращаться" required>
+                    <input type="tel" name="user_phone" placeholder="+7 (___) ___-__-__" required>
+                    <textarea name="user_message" placeholder="Ваш вопрос или пожелание" rows="3"></textarea>
+                    <button type="submit">Записаться на замер</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" style="padding-bottom:0;">
+        <div class="section-header fade-up">
+            <div class="section-badge"><i class="fa-solid fa-star"></i> Отзывы</div>
+            <h2>Нас рекомендуют</h2>
+            <p>Более 150 семей доверили нам строительство и ремонт своих домов и квартир.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card fade-up">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Очень довольны ремонтом! Сделали дизайнерский проект — получилось лучше, чем на картинках. Спасибо Александру и всей бригаде за профессионализм.</p>
+                <div class="review-author">
+                    <div class="review-avatar">Е</div>
+                    <div>
+                        <p class="review-name">Елена К.</p>
+                        <p class="review-source">ул. Горького, 45</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card fade-up">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Заказывали отделку дома под ключ. Всё сделали в срок, ни разу не подвели. Отдельное спасибо за прозрачную смету — ни копейки лишней не взяли.</p>
+                <div class="review-author">
+                    <div class="review-avatar">Д</div>
+                    <div>
+                        <p class="review-name">Дмитрий П.</p>
+                        <p class="review-source">пос. Васильково</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card fade-up">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Фундамент заливали — ребята подошли ответственно. Соблюли технологию, уложились в бюджет. Рекомендую!</p>
+                <div class="review-author">
+                    <div class="review-avatar">С</div>
+                    <div>
+                        <p class="review-name">Сергей М.</p>
+                        <p class="review-source">ул. Аксакова, 12</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="section">
+        <div class="section-header fade-up">
+            <div class="section-badge"><i class="fa-solid fa-shield"></i> Гарантии</div>
+            <h2>Почему выбирают нас</h2>
+        </div>
+        <div class="guarantee-grid">
+            <div class="guarantee-item fade-up">
+                <i class="fa-solid fa-file-signature"></i>
+                <h4>Прозрачная смета</h4>
+                <p>Никаких скрытых платежей. Фиксированная стоимость в договоре.</p>
+            </div>
+            <div class="guarantee-item fade-up">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h4>Соблюдение сроков</h4>
+                <p>Чёткий график работ. Не срываем дедлайны.</p>
+            </div>
+            <div class="guarantee-item fade-up">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Гарантия 5 лет</h4>
+                <p>На все виды работ. Устраняем недочёты за свой счёт.</p>
+            </div>
+            <div class="guarantee-item fade-up">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <h4>Отчёты онлайн</h4>
+                <p>Еженедельные фото и видеоотчёты о ходе работ.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section" style="padding-bottom:40px;background:var(--bg-secondary);">
+        <div class="section-header fade-up">
+            <div class="section-badge"><i class="fa-solid fa-images"></i> Портфолио</div>
+            <h2>Наши работы</h2>
+            <p>Реальные проекты. Реальные люди. Результат, которым мы гордимся.</p>
+        </div>
+        <div class="works-slider fade-up">
+            <div class="works-slider-track" id="worksSliderTrack">
+                <div class="works-slide"><img src="img/photo1.png" alt=""></div>
+                <div class="works-slide"><img src="img/photo2.png" alt=""></div>
+                <div class="works-slide"><img src="img/photo3.png" alt=""></div>
+                <div class="works-slide"><img src="img/photo4.jpg" alt=""></div>
+                <div class="works-slide"><img src="img/photo7.jpg" alt=""></div>
+                <div class="works-slide"><img src="img/photo8.jpg" alt=""></div>
+                <div class="works-slide"><img src="img/photo9.jpg" alt=""></div>
+                <div class="works-slide"><img src="img/photo10.png" alt=""></div>
+                <div class="works-slide"><img src="img/photo11.png" alt=""></div>
+                <div class="works-slide"><img src="img/photo12.jpg" alt=""></div>
+                <div class="works-slide"><img src="img/photo13.png" alt=""></div>
+            </div>
+            <button class="wslider-btn wslider-prev" id="worksPrev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="wslider-btn wslider-next" id="worksNext"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="wslider-dots" id="worksDots"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="logo-text">Профи в <span>Деле</span></span>
+                <p>Строительная компания в Калининграде. Строим дома, делаем ремонт, благоустраиваем участки с 2000 года. Гарантия 5 лет.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/profivdele_39" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://vk.com/profivdele1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-vk"></i></a>
+                    <a href="https://t.me/profivdele1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Услуги</h4>
+                <ul>
+                    <li><a href="#">Отделка домов</a></li>
+                    <li><a href="#">Ремонт квартир</a></li>
+                    <li><a href="#">Фундамент</a></li>
+                    <li><a href="#">Тёплый пол</a></li>
+                    <li><a href="#">Дизайн-проекты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                    <li><a href="#" data-contacts onclick="window.openContacts(event)">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+79005633555">+7 (900) 563-35-55</a></li>
+                    <li><a href="mailto:profivdele4@gmail.com">profivdele4@gmail.com</a></li>
+                    <li><a href="#">Калининград</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Профи в Деле. Все права защищены.</p>
+            <p>Работаем по договору. НДС не облагается.</p>
+        </div>
+    </footer>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lightbox-img-wrap" id="lightboxWrap">
+        <img src="" alt="" class="lightbox-img" id="lightboxImg" draggable="false">
+    </div>
+    <div class="lightbox-zoom-info" id="lightboxZoomInfo">100%</div>
+    <div class="lightbox-zoom-controls">
+        <button class="lightbox-zoom-btn" id="zoomOut"><i class="fa-solid fa-minus"></i></button>
+        <button class="lightbox-zoom-btn" id="zoomReset"><i class="fa-solid fa-expand"></i></button>
+        <button class="lightbox-zoom-btn" id="zoomIn"><i class="fa-solid fa-plus"></i></button>
+    </div>
+</div>
+
+<!-- CONTACTS MODAL -->
+<div class="contacts-overlay" id="contactsOverlay">
+  <div class="contacts-modal" id="contactsModal">
+    <button class="contacts-close" id="contactsClose"><i class="fa-solid fa-xmark"></i></button>
+    <div class="contacts-body">
+      <div class="contacts-header">
+        <div class="contacts-badge"><i class="fa-solid fa-building"></i></div>
+        <h2 class="contacts-title">Наш офис</h2>
+      </div>
+      <div class="contacts-card">
+        <div class="contacts-row">
+          <div class="contacts-icon-box loc"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contacts-text">
+            <span class="contacts-label">Город</span>
+            <span class="contacts-value">Калининград</span>
+          </div>
+        </div>
+        <div class="contacts-map"><i class="fa-solid fa-map"></i> <span>Калининград, Россия</span></div>
+      </div>
+      <a href="tel:+79005633555" class="contacts-card contacts-link">
+        <div class="contacts-row">
+          <div class="contacts-icon-box ph"><i class="fa-solid fa-phone"></i></div>
+          <div class="contacts-text">
+            <span class="contacts-label">Телефон</span>
+            <span class="contacts-value">+7 (900) 563-35-55</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square contacts-ext"></i>
+        </div>
+        <div class="contacts-desc">Звоните — проконсультируем, рассчитаем стоимость, запишем на замер.</div>
+      </a>
+      <a href="mailto:profivdele4@gmail.com" class="contacts-card contacts-link">
+        <div class="contacts-row">
+          <div class="contacts-icon-box mail"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contacts-text">
+            <span class="contacts-label">Email</span>
+            <span class="contacts-value">profivdele4@gmail.com</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square contacts-ext"></i>
+        </div>
+        <div class="contacts-desc">Присылайте планировку и пожелания — ответим в течение часа.</div>
+      </a>
+      <div class="contacts-card">
+        <div class="contacts-row">
+          <div class="contacts-icon-box time"><i class="fa-solid fa-clock"></i></div>
+          <div class="contacts-text">
+            <span class="contacts-label">График работы</span>
+            <span class="contacts-value">Пн–Вс: 08:00–20:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="success-toast" id="successToast"><i class="fa-solid fa-circle-check"></i> Заявка успешно отправлена</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+        <button class="mobile-menu-close" id="mobileMenuClose"><i class="fa-solid fa-xmark"></i></button>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a class="btn" href="#" data-contacts onclick="window.openContacts(event)">Контакты</a></li>
+            <li><button class="theme-toggle" id="themeToggleMobile"><i class="fa-regular fa-moon"></i></button></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+const saved = localStorage.getItem('theme');
+function applyTheme(dark) {
+    const html = document.documentElement;
+    if (dark) {
+        html.setAttribute('data-theme', 'dark');
+        document.querySelectorAll('.theme-toggle').forEach(function(b) { b.innerHTML = '<i class="fa-regular fa-sun"></i>'; });
+    } else {
+        html.removeAttribute('data-theme');
+        document.querySelectorAll('.theme-toggle').forEach(function(b) { b.innerHTML = '<i class="fa-regular fa-moon"></i>'; });
+    }
+}
+if (saved === 'dark') applyTheme(true);
+document.querySelectorAll('.theme-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        applyTheme(!isDark);
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+});
+
+const header = document.getElementById('header');
+window.addEventListener('scroll', function() { header.classList.toggle('scrolled', window.scrollY > 50); });
+
+const burgerToggle = document.getElementById('burgerToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+if (burgerToggle && mobileMenu) {
+    burgerToggle.addEventListener('click', function() { mobileMenu.classList.toggle('active'); document.body.classList.toggle('no-scroll'); });
+    mobileMenuClose.addEventListener('click', function() { mobileMenu.classList.remove('active'); document.body.classList.remove('no-scroll'); });
+    mobileMenu.addEventListener('click', function(e) { if (e.target === mobileMenu) { mobileMenu.classList.remove('active'); document.body.classList.remove('no-scroll'); } });
+}
+
+window.openContacts = function(e) { e.preventDefault(); var o = document.getElementById('contactsOverlay'); if (o) { o.classList.add('active'); document.body.classList.add('no-scroll'); } var m = document.getElementById('mobileMenu'); if (m && m.classList.contains('active')) { m.classList.remove('active'); document.body.classList.remove('no-scroll'); } };
+document.addEventListener('DOMContentLoaded', function() {
+    var overlay = document.getElementById('contactsOverlay'), closeBtn = document.getElementById('contactsClose');
+    if (!overlay) return;
+    document.querySelectorAll('[data-contacts]').forEach(function(el) { el.addEventListener('click', window.openContacts); });
+    if (closeBtn) closeBtn.addEventListener('click', function() { overlay.classList.remove('active'); document.body.classList.remove('no-scroll'); });
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) { overlay.classList.remove('active'); document.body.classList.remove('no-scroll'); } });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) { overlay.classList.remove('active'); document.body.classList.remove('no-scroll'); } });
+});
+
+function animateCounters() {
+    document.querySelectorAll('.counter').forEach(function(counter) {
+        var target = parseFloat(counter.getAttribute('data-target')), startTime = null;
+        function step(ts) {
+            if (!startTime) startTime = ts;
+            var p = Math.min((ts - startTime) / 2000, 1), e = 1 - Math.pow(1 - p, 3), c = e * target;
+            counter.textContent = target % 1 === 0 ? Math.floor(c) : c.toFixed(1);
+            if (p < 1) requestAnimationFrame(step); else counter.textContent = target % 1 === 0 ? Math.floor(target) : target.toFixed(1);
+        }
+        requestAnimationFrame(step);
+    });
+}
+
+function observeFadeUp() {
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+}
+
+// ===== REPAIR CALCULATOR =====
+(function() {
+    var areaInput = document.getElementById('areaInput');
+    var areaBracket = document.getElementById('areaBracket');
+    var typeLabels = document.querySelectorAll('#typeOptions .calc-option');
+    var calcPrice = document.getElementById('calcPrice');
+    var hiddenArea = document.getElementById('hiddenArea');
+    var hiddenType = document.getElementById('hiddenType');
+    var hiddenPrice = document.getElementById('hiddenPrice');
+    var selectedBracket = null;
+    var selectedType = 'econom';
+    var selectedRate = 5000;
+    var currentArea = 50;
+
+    var brackets = [
+        { min: 1, max: 30, key: '1-30', name: 'до 30 м²' },
+        { min: 30, max: 50, key: '30-50', name: '30–50 м²' },
+        { min: 50, max: 70, key: '50-70', name: '50–70 м²' },
+        { min: 70, max: 100, key: '70-100', name: '70–100 м²' },
+        { min: 100, max: Infinity, key: '100+', name: 'более 100 м²' }
+    ];
+
+    var basePrices = {
+        '1-30': { econom: 5000, standard: 9000, design: 15000 },
+        '30-50': { econom: 4800, standard: 8500, design: 14000 },
+        '50-70': { econom: 4500, standard: 8000, design: 13000 },
+        '70-100': { econom: 4200, standard: 7500, design: 12000 },
+        '100+': { econom: 4000, standard: 7000, design: 11000 }
+    };
+
+    function formatPrice(num) { return Math.round(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽'; }
+
+    function getBracket(area) { for (var i = 0; i < brackets.length; i++) { if (area >= brackets[i].min && area < brackets[i].max) return brackets[i]; } return null; }
+
+    function update() {
+        var val = parseFloat(areaInput.value);
+        if (isNaN(val) || val < 1) { currentArea = 0; areaBracket.textContent = 'Введите площадь'; calcPrice.textContent = '—'; return; }
+        currentArea = val;
+        var br = getBracket(val);
+        if (br) {
+            selectedBracket = br.key;
+            areaBracket.textContent = 'Диапазон: ' + br.name;
+            areaBracket.style.color = 'var(--accent)';
+        } else {
+            selectedBracket = null;
+            areaBracket.textContent = 'Площадь должна быть не менее 1 м²';
+            areaBracket.style.color = 'var(--text-muted)';
+        }
+        calcResult();
+    }
+
+    function calcResult() {
+        if (!selectedBracket || currentArea < 1) { calcPrice.textContent = '—'; return; }
+        var rate = basePrices[selectedBracket] ? basePrices[selectedBracket][selectedType] : selectedRate;
+        var price = rate * currentArea;
+        calcPrice.textContent = formatPrice(price);
+        hiddenArea.value = currentArea + ' м²';
+        hiddenType.value = selectedType;
+        hiddenPrice.value = Math.round(price);
+    }
+
+    areaInput.addEventListener('input', update);
+
+    typeLabels.forEach(function(label) {
+        label.addEventListener('click', function() {
+            typeLabels.forEach(function(l) { l.classList.remove('selected'); });
+            this.classList.add('selected');
+            selectedType = this.getAttribute('data-type');
+            selectedRate = parseFloat(this.getAttribute('data-rate'));
+            calcResult();
+        });
+    });
+
+    update();
+})();
+
+// ===== SLIDER =====
+(function() {
+    var track = document.getElementById('worksSliderTrack');
+    if (!track) return;
+    var slides = track.querySelectorAll('.works-slide'), prev = document.getElementById('worksPrev'), next = document.getElementById('worksNext'), dots = document.getElementById('worksDots'), current = 0, total = slides.length;
+    if (total === 0) return;
+    function isMobile() { return window.innerWidth <= 767; }
+    function perView() { return isMobile() ? 1 : 3; }
+    function gap() { return isMobile() ? 0 : 24; }
+    function pages() { return Math.ceil(total / perView()); }
+    function upd() {
+        var s = document.querySelector('.works-slider');
+        if (!s) return;
+        var w = s.offsetWidth;
+        track.style.transform = 'translateX(-' + (current * (w + gap())) + 'px)';
+        dots.querySelectorAll('span').forEach(function(sp, i) { sp.classList.toggle('active', i === current); });
+    }
+    function rebuild() {
+        var p = pages(); dots.innerHTML = '';
+        for (var i = 0; i < p; i++) (function(idx) { var d = document.createElement('span'); d.addEventListener('click', function() { current = idx; upd(); }); dots.appendChild(d); })(i);
+        if (current >= p) current = p - 1;
+        if (current < 0) current = 0;
+        var sp = dots.querySelectorAll('span'); if (sp.length) sp[current].classList.add('active');
+    }
+    rebuild();
+    prev.addEventListener('click', function() { if (current > 0) { current--; upd(); } });
+    next.addEventListener('click', function() { if (current < pages() - 1) { current++; upd(); } });
+    var slider = document.querySelector('.works-slider');
+    if (slider) {
+        var sx = 0, db = 0, sw = false;
+        slider.addEventListener('touchstart', function(e) { if (e.touches.length === 1 && isMobile()) { sx = e.touches[0].clientX; sw = false; track.style.transition = 'none'; db = -(current * (slider.offsetWidth + gap())); } }, { passive: true });
+        slider.addEventListener('touchmove', function(e) { if (e.touches.length !== 1 || !isMobile()) return; var dx = e.touches[0].clientX - sx; if (Math.abs(dx) > 10) { sw = true; e.preventDefault(); track.style.transform = 'translateX(' + (db + dx) + 'px)'; } }, { passive: false });
+        slider.addEventListener('touchend', function(e) { if (!isMobile()) { sw = false; return; } var dx = e.changedTouches[0].clientX - sx; track.style.transition = ''; void track.offsetHeight; if (sw && Math.abs(dx) > 50) { if (dx < 0 && current < pages() - 1) current++; else if (dx > 0 && current > 0) current--; } upd(); sw = false; }, { passive: true });
+    }
+    window.addEventListener('resize', function() { var p = pages(); if (dots.querySelectorAll('span').length !== p) rebuild(); if (current >= p) current = p - 1; if (current < 0) current = 0; upd(); });
+    upd();
+})();
+
+// ===== LIGHTBOX =====
+(function() {
+    var lb = document.getElementById('lightbox'), img = document.getElementById('lightboxImg'), wrap = document.getElementById('lightboxWrap'), close = document.getElementById('lightboxClose'), zi = document.getElementById('zoomIn'), zo = document.getElementById('zoomOut'), zr = document.getElementById('zoomReset'), zinfo = document.getElementById('lightboxZoomInfo');
+    var zoom = 1, px = 0, py = 0, drag = false, was = false, sx = 0, sy = 0, ltd = 0, idx = -1, srcs = [];
+    document.querySelectorAll('.works-slide img').forEach(function(s) { srcs.push(s.src); });
+    function open(s) { idx = srcs.indexOf(s); img.src = s; lb.classList.add('active'); document.body.style.overflow = 'hidden'; rzoom(); nav(); }
+    function prev() { if (idx <= 0) return; idx--; img.src = srcs[idx]; rzoom(); nav(); }
+    function next() { if (idx >= srcs.length - 1) return; idx++; img.src = srcs[idx]; rzoom(); nav(); }
+    function nav() { document.getElementById('lightboxPrev').style.display = idx <= 0 ? 'none' : 'flex'; document.getElementById('lightboxNext').style.display = idx >= srcs.length - 1 ? 'none' : 'flex'; }
+    function cl() { lb.classList.remove('active'); document.body.style.overflow = ''; rzoom(); }
+    function rzoom() { zoom = 1; px = 0; py = 0; tr(); zinfo.textContent = '100%'; }
+    function tr() { img.style.transform = 'translate(' + px + 'px,' + py + 'px) scale(' + zoom + ')'; }
+    function az(n, cx, cy) { var old = zoom; zoom = Math.max(1, Math.min(5, n)); if (cx !== undefined && cy !== undefined && zoom > 1) { var r = wrap.getBoundingClientRect(); var rcx = cx - r.left - r.width / 2, rcy = cy - r.top - r.height / 2; px = rcx - (rcx - px) * zoom / old; py = rcy - (rcy - py) * zoom / old; } else if (zoom === 1) { px = 0; py = 0; } var pct = Math.round(zoom * 100); zinfo.textContent = pct + '%'; zinfo.classList.add('show'); clearTimeout(zinfo._hide); zinfo._hide = setTimeout(function() { zinfo.classList.remove('show'); }, 1500); tr(); }
+    document.querySelectorAll('.works-slide').forEach(function(s) { s.addEventListener('click', function() { var i = this.querySelector('img'); if (i) open(i.src); }); });
+    document.getElementById('lightboxPrev').addEventListener('click', prev);
+    document.getElementById('lightboxNext').addEventListener('click', next);
+    close.addEventListener('click', cl);
+    lb.addEventListener('click', function(e) { if (e.target === lb && !was) cl(); was = false; });
+    zi.addEventListener('click', function() { az(zoom + 0.25); });
+    zo.addEventListener('click', function() { az(zoom - 0.25); });
+    zr.addEventListener('click', rzoom);
+    lb.addEventListener('wheel', function(e) { e.preventDefault(); az(zoom + (e.deltaY > 0 ? -0.25 : 0.25), e.clientX, e.clientY); }, { passive: false });
+    document.addEventListener('keydown', function(e) { if (!lb.classList.contains('active')) return; if (e.key === 'Escape') cl(); else if (e.key === 'ArrowLeft') prev(); else if (e.key === 'ArrowRight') next(); else if (e.key === '+' || e.key === '=') az(zoom + 0.25); else if (e.key === '-') az(zoom - 0.25); else if (e.key === '0') rzoom(); });
+    wrap.addEventListener('mousedown', function(e) { e.preventDefault(); if (zoom <= 1) return; drag = true; was = false; sx = e.clientX - px; sy = e.clientY - py; wrap.style.cursor = 'grabbing'; });
+    document.addEventListener('mousemove', function(e) { if (!drag) return; was = true; px = e.clientX - sx; py = e.clientY - sy; tr(); });
+    document.addEventListener('mouseup', function() { drag = false; wrap.style.cursor = 'grab'; });
+    wrap.addEventListener('touchstart', function(e) { if (e.touches.length === 2) { ltd = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY); } else if (e.touches.length === 1) { drag = true; var t = e.touches[0]; sx = zoom > 1 ? t.clientX - px : t.clientX; sy = zoom > 1 ? t.clientY - py : t.clientY; } }, { passive: true });
+    wrap.addEventListener('touchmove', function(e) { if (e.touches.length === 2) { e.preventDefault(); var d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY); az(zoom + (d - ltd) * 0.01); ltd = d; } else if (e.touches.length === 1 && drag && zoom > 1) { var t = e.touches[0]; px = t.clientX - sx; py = t.clientY - sy; tr(); } }, { passive: false });
+    wrap.addEventListener('touchend', function(e) { if (drag && zoom <= 1) { var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) { if (dx < 0) next(); else prev(); } } drag = false; ltd = 0; }, { passive: true });
+})();
+
+(function() {
+    var toast = document.getElementById('successToast');
+    if (!toast) return;
+    function show() { toast.classList.add('show'); setTimeout(function() { toast.classList.remove('show'); }, 4000); }
+    if (window.location.search.indexOf('success=1') !== -1) { show(); if (window.history && window.history.replaceState) window.history.replaceState({}, '', window.location.pathname); }
+    document.querySelectorAll('form[action="send_order.php"]').forEach(function(form) {
+        form.addEventListener('submit', function(e) { e.preventDefault(); var btn = form.querySelector('button'); btn.disabled = true; btn.textContent = 'Отправка...'; fetch('send_order.php', { method: 'POST', body: new FormData(form) }).then(function() { show(); form.reset(); }).catch(function() { alert('Ошибка отправки'); }).finally(function() { btn.disabled = false; btn.textContent = 'Отправить заявку'; }); });
+    });
+})();
+
+document.addEventListener('DOMContentLoaded', function() { observeFadeUp(); animateCounters(); });
+</script>
+
+</body>
+</html>
