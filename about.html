@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — Профи в Деле | Строительная компания в Калининграде</title>
+    <link rel="stylesheet" href="css/main.css?v=5">
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .burger { display: none !important; }
+        .nav-item { display: list-item !important; }
+        .contacts-overlay { position: fixed; inset: 0; z-index: 100000; opacity: 0; visibility: hidden; pointer-events: none; }
+        .contacts-overlay.active { opacity: 1; visibility: visible; pointer-events: auto; }
+        @media (max-width: 767px) { .nav-item { display: none !important; } .burger { display: block !important; } header .theme-toggle { display: none !important; } }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <header class="header-container" id="header">
+        <div class="header-logo">
+            <img src="img/profivdele-Photoroom.png" alt="Профи в деле">
+            <span class="logo-text">Профи в <span>Деле</span></span>
+        </div>
+        <nav>
+            <ul>
+                <li class="phone-item">
+                    <a href="tel:+79005633555"><i class="fa-solid fa-phone"></i> +7 (900) 563-35-55</a>
+                </li>
+                <li class="nav-item"><a href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="active" href="about.html">О нас</a></li>
+                <li class="nav-item"><a class="btn" href="#" data-contacts onclick="window.openContacts(event)">Контакты</a></li>
+                <li><button class="burger" id="burgerToggle" aria-label="Меню"><i class="fa-solid fa-bars"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <div class="hero-bg">
+            <div class="hero-gradient g1"></div>
+            <div class="hero-gradient g2"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-model ml">
+                <svg viewBox="0 0 460 420" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="20,380 20,190 170,60 320,190 320,380" fill="currentColor" fill-opacity="0.05" stroke-width="2.5"/>
+                    <polygon points="320,190 320,380 440,300 440,110" fill="currentColor" fill-opacity="0.035" stroke-width="2.5"/>
+                    <polygon points="20,190 170,60 320,190" fill="currentColor" fill-opacity="0.04" stroke-width="2.5"/>
+                    <polygon points="320,190 170,60 280,10 440,110" fill="currentColor" fill-opacity="0.025" stroke-width="2.5"/>
+                    <polygon points="20,380 320,380 440,300 140,300" fill="currentColor" fill-opacity="0.015" stroke-width="1.2" stroke-dasharray="5 5"/>
+                    <rect x="60" y="215" width="50" height="60" rx="3" stroke-width="1.8" opacity="0.75"/>
+                    <line x1="85" y1="215" x2="85" y2="275" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="60" y1="245" x2="110" y2="245" stroke-width="1.2" opacity="0.5"/>
+                    <rect x="210" y="215" width="50" height="60" rx="3" stroke-width="1.8" opacity="0.75"/>
+                    <line x1="235" y1="215" x2="235" y2="275" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="210" y1="245" x2="260" y2="245" stroke-width="1.2" opacity="0.5"/>
+                    <rect x="140" y="290" width="55" height="90" rx="3" stroke-width="1.8" opacity="0.75"/>
+                    <circle cx="185" cy="335" r="3.5" fill="currentColor" opacity="0.5"/>
+                    <line x1="320" y1="240" x2="440" y2="160" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="320" y1="300" x2="440" y2="220" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="320" y1="350" x2="440" y2="270" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="95" y1="145" x2="170" y2="60" stroke-width="1" opacity="0.35" stroke-dasharray="4 4"/>
+                    <line x1="245" y1="145" x2="170" y2="60" stroke-width="1" opacity="0.35" stroke-dasharray="4 4"/>
+                    <line x1="20" y1="400" x2="320" y2="400" stroke-width="1" opacity="0.25"/>
+                    <line x1="20" y1="395" x2="20" y2="405" stroke-width="1" opacity="0.25"/>
+                    <line x1="320" y1="395" x2="320" y2="405" stroke-width="1" opacity="0.25"/>
+                    <line x1="320" y1="400" x2="440" y2="320" stroke-width="1" opacity="0.25"/>
+                    <line x1="440" y1="315" x2="440" y2="325" stroke-width="1" opacity="0.25"/>
+                </svg>
+            </div>
+            <div class="hero-model mr" style="color:var(--blue-accent);">
+                <svg viewBox="0 0 420 480" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="40,440 40,90 260,90 260,440" fill="currentColor" fill-opacity="0.05" stroke-width="2.5"/>
+                    <polygon points="260,90 260,440 370,370 370,20" fill="currentColor" fill-opacity="0.035" stroke-width="2.5"/>
+                    <polygon points="40,90 260,90 370,20 150,20" fill="currentColor" fill-opacity="0.04" stroke-width="2.5"/>
+                    <polygon points="130,20 180,20 180,-5 155,-15 130,-5" fill="currentColor" fill-opacity="0.025" stroke-width="1.5"/>
+                    <line x1="40" y1="180" x2="260" y2="180" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="40" y1="270" x2="260" y2="270" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="40" y1="360" x2="260" y2="360" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="260" y1="180" x2="370" y2="110" stroke-width="1" opacity="0.35"/>
+                    <line x1="260" y1="270" x2="370" y2="200" stroke-width="1" opacity="0.35"/>
+                    <line x1="260" y1="360" x2="370" y2="290" stroke-width="1" opacity="0.35"/>
+                    <rect x="75" y="110" width="32" height="44" rx="2" stroke-width="1.5" opacity="0.6"/>
+                    <rect x="135" y="110" width="32" height="44" rx="2" stroke-width="1.5" opacity="0.6"/>
+                    <rect x="195" y="110" width="32" height="44" rx="2" stroke-width="1.5" opacity="0.6"/>
+                    <rect x="75" y="200" width="32" height="44" rx="2" stroke-width="1.5" opacity="0.6"/>
+                    <rect x="135" y="200" width="32" height="44" rx="2" stroke-width="1.5" opacity="0.6"/>
+                    <rect x="195" y="200" width="32" height="44" rx="2" stroke-width="1.5" opacity="0.6"/>
+                    <rect x="75" y="290" width="32" height="44" rx="2" stroke-width="1.5" opacity="0.6"/>
+                    <rect x="135" y="290" width="32" height="44" rx="2" stroke-width="1.5" opacity="0.6"/>
+                    <rect x="195" y="290" width="32" height="44" rx="2" stroke-width="1.5" opacity="0.6"/>
+                    <rect x="115" y="375" width="55" height="65" rx="3" stroke-width="1.8" opacity="0.7"/>
+                    <rect x="280" y="120" width="30" height="42" rx="2" stroke-width="1.5" opacity="0.4"/>
+                    <rect x="280" y="210" width="30" height="42" rx="2" stroke-width="1.5" opacity="0.4"/>
+                    <rect x="280" y="300" width="30" height="42" rx="2" stroke-width="1.5" opacity="0.4"/>
+                </svg>
+            </div>
+        </div>
+        <div class="about-hero-content">
+            <div class="hero-badge" style="display:inline-flex;margin-bottom:20px;">
+                <span class="dot"></span>
+                Строим в Калининграде с 2000 года
+            </div>
+            <h1>Надёжность,<br>проверенная временем</h1>
+            <p>24 года опыта, 150+ готовых объектов и команда настоящих профессионалов своего дела.</p>
+        </div>
+    </section>
+
+    <div class="section" style="padding-top:0;">
+        <div class="about-mission fade-up">
+            <p>Компания «Профи в деле» родилась из желания делать качественные строительные работы доступными каждому. Начиная с небольших проектов, мы выросли в команду профессионалов, способных воплотить в жизнь проекты любой сложности — от фундамента до отделки «под ключ». Мы ценим доверие наших клиентов и всегда находимся на связи на каждом этапе строительства. Честность, прозрачность и высокое качество — три принципа, которыми мы руководствуемся каждый день.</p>
+        </div>
+
+        <div class="about-stats fade-up">
+            <div class="stat-item">
+                <h3><span class="counter" data-target="24">0</span>+</h3>
+                <p>Лет на рынке</p>
+            </div>
+            <div class="stat-item">
+                <h3><span class="counter" data-target="150">0</span>+</h3>
+                <p>Построенных объектов</p>
+            </div>
+            <div class="stat-item">
+                <h3><span class="counter" data-target="12">0</span>+</h3>
+                <p>Штатных сотрудников</p>
+            </div>
+            <div class="stat-item">
+                <h3><span class="counter" data-target="98">0</span>%</h3>
+                <p>Довольных клиентов</p>
+            </div>
+        </div>
+
+        <div class="section-header fade-up">
+            <div class="section-badge"><i class="fa-solid fa-handshake"></i> Почему мы</div>
+            <h2>Наши преимущества</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-card fade-up">
+                <i class="fa-solid fa-medal"></i>
+                <h3>Опыт и качество</h3>
+                <p>Более 150 завершённых объектов. Используем только проверенные материалы и современные технологии строительства.</p>
+            </div>
+            <div class="about-card fade-up">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Соблюдение сроков</h3>
+                <p>Ценим ваше время — все работы выполняются строго по согласованному графику без задержек.</p>
+            </div>
+            <div class="about-card fade-up">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h3>Индивидуальный подход</h3>
+                <p>Учитываем все пожелания заказчика. Каждый проект уникален и создаётся специально для вас.</p>
+            </div>
+            <div class="about-card fade-up">
+                <i class="fa-solid fa-file-shield"></i>
+                <h3>Гарантия 5 лет</h3>
+                <p>Даём гарантию на все выполненные работы. Вы можете быть уверены в надёжности и долговечности результата.</p>
+            </div>
+            <div class="about-card fade-up">
+                <i class="fa-solid fa-file-invoice"></i>
+                <h3>Прозрачная смета</h3>
+                <p>Подробная смета без скрытых платежей. Вы заранее знаете точную стоимость каждого этапа работ.</p>
+            </div>
+            <div class="about-card fade-up">
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Команда профи</h3>
+                <p>Штат опытных строителей, прорабов и дизайнеров, которые работают слаженно и на результат.</p>
+            </div>
+        </div>
+
+        <div class="section-header fade-up" style="margin-top:80px;">
+            <div class="section-badge"><i class="fa-solid fa-people-group"></i> Руководство</div>
+            <h2>Наша команда</h2>
+        </div>
+        <div class="services-grid fade-up" style="max-width:900px;">
+            <div class="service-card" style="cursor:default;">
+                <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3>Алексей К.</h3>
+                <p style="font-size:13px;color:var(--accent);font-weight:600;">Руководитель компании</p>
+                <p>Более 20 лет в строительстве. Лично контролирует качество на каждом объекте.</p>
+            </div>
+            <div class="service-card" style="cursor:default;">
+                <div class="service-icon"><i class="fa-solid fa-user-gear"></i></div>
+                <h3>Дмитрий С.</h3>
+                <p style="font-size:13px;color:var(--accent);font-weight:600;">Главный прораб</p>
+                <p>15 лет опыта. Отвечает за график работ, координацию бригад и контроль качества.</p>
+            </div>
+            <div class="service-card" style="cursor:default;">
+                <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
+                <h3>Екатерина В.</h3>
+                <p style="font-size:13px;color:var(--accent);font-weight:600;">Дизайнер-архитектор</p>
+                <p>Автор более 50 дизайн-проектов. Создаёт пространства, в которых хочется жить.</p>
+            </div>
+            </div>
+            <div class="about-geo geo-gem">
+                <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="100,10 180,70 180,140 100,190 20,140 20,70" stroke-width="1.8" opacity="0.7"/>
+                    <line x1="100" y1="10" x2="100" y2="190" stroke-width="1.2" opacity="0.4"/>
+                    <line x1="20" y1="70" x2="180" y2="70" stroke-width="1.2" opacity="0.4"/>
+                    <line x1="20" y1="140" x2="180" y2="140" stroke-width="1.2" opacity="0.4"/>
+                    <polygon points="100,10 50,55 100,100 150,55" fill="currentColor" fill-opacity="0.04" stroke-width="1" opacity="0.5"/>
+                    <polygon points="50,55 20,70 50,130 100,100" fill="currentColor" fill-opacity="0.03" stroke-width="1" opacity="0.4"/>
+                    <polygon points="150,55 180,70 150,130 100,100" fill="currentColor" fill-opacity="0.03" stroke-width="1" opacity="0.4"/>
+                    <polygon points="100,100 50,130 100,190 150,130" fill="currentColor" fill-opacity="0.03" stroke-width="1" opacity="0.4"/>
+                    <circle cx="100" cy="100" r="3" fill="currentColor" opacity="0.5"/>
+                    <circle cx="50" cy="55" r="2" fill="currentColor" opacity="0.4"/>
+                    <circle cx="150" cy="55" r="2" fill="currentColor" opacity="0.4"/>
+                    <circle cx="50" cy="130" r="2" fill="currentColor" opacity="0.4"/>
+                    <circle cx="150" cy="130" r="2" fill="currentColor" opacity="0.4"/>
+                    <circle cx="100" cy="190" r="2" fill="currentColor" opacity="0.4"/>
+                    <circle cx="100" cy="10" r="2" fill="currentColor" opacity="0.4"/>
+                </svg>
+            </div>
+            <div class="about-geo geo-ring">
+                <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="120" cy="50" rx="75" ry="25" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="120" cy="50" rx="45" ry="14" stroke-width="1" opacity="0.35" stroke-dasharray="4 4"/>
+                    <ellipse cx="120" cy="50" rx="105" ry="35" stroke-width="0.8" opacity="0.25" stroke-dasharray="3 6"/>
+                    <line x1="45" y1="50" x2="30" y2="120" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="120" y1="25" x2="120" y2="95" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="195" y1="50" x2="210" y2="120" stroke-width="1.2" opacity="0.5"/>
+                    <ellipse cx="120" cy="120" rx="90" ry="30" stroke-width="1.8" opacity="0.7"/>
+                    <ellipse cx="120" cy="120" rx="55" ry="18" stroke-width="1" opacity="0.4" stroke-dasharray="4 4"/>
+                    <line x1="30" y1="120" x2="30" y2="190" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="120" y1="90" x2="120" y2="160" stroke-width="1.2" opacity="0.5"/>
+                    <line x1="210" y1="120" x2="210" y2="190" stroke-width="1.2" opacity="0.5"/>
+                    <ellipse cx="120" cy="190" rx="90" ry="30" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="120" cy="190" rx="55" ry="18" stroke-width="0.8" opacity="0.3" stroke-dasharray="3 5"/>
+                    <line x1="30" y1="190" x2="45" y2="240" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="120" y1="160" x2="120" y2="215" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="210" y1="190" x2="195" y2="240" stroke-width="0.8" opacity="0.3"/>
+                    <ellipse cx="120" cy="230" rx="60" ry="20" stroke-width="1" opacity="0.4"/>
+                    <line x1="30" y1="120" x2="45" y2="50" stroke-width="0.6" opacity="0.2" stroke-dasharray="3 4"/>
+                    <line x1="210" y1="120" x2="195" y2="50" stroke-width="0.6" opacity="0.2" stroke-dasharray="3 4"/>
+                </svg>
+            </div>
+            <div class="about-geo geo-crystal">
+                <svg viewBox="0 0 100 120" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50,5 85,30 85,70 50,115 15,70 15,30" stroke-width="1.5" opacity="0.7"/>
+                    <line x1="50" y1="5" x2="50" y2="115" stroke-width="1" opacity="0.4"/>
+                    <line x1="15" y1="30" x2="85" y2="30" stroke-width="1" opacity="0.4"/>
+                    <line x1="15" y1="70" x2="85" y2="70" stroke-width="1" opacity="0.4"/>
+                    <polygon points="50,5 35,25 50,45 65,25" fill="currentColor" fill-opacity="0.04" stroke-width="0.8" opacity="0.5"/>
+                    <polygon points="35,25 15,30 25,65 50,45" fill="currentColor" fill-opacity="0.03" stroke-width="0.8" opacity="0.4"/>
+                    <polygon points="65,25 85,30 75,65 50,45" fill="currentColor" fill-opacity="0.03" stroke-width="0.8" opacity="0.4"/>
+                    <polygon points="50,45 25,65 50,115 75,65" fill="currentColor" fill-opacity="0.03" stroke-width="0.8" opacity="0.4"/>
+                </svg>
+            </div>
+        </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="logo-text">Профи в <span>Деле</span></span>
+                <p>Строительная компания в Калининграде. Строим дома, делаем ремонт, благоустраиваем участки с 2000 года. Гарантия 5 лет.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/profivdele_39" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://vk.com/profivdele1" target="_blank"><i class="fa-brands fa-vk"></i></a>
+                    <a href="https://t.me/profivdele1" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.avito.ru/brands/08c5b0faeced84d7e2e7809a525a0006/all?src=sharing&sellerId=8026d5e1b687bcd477033e638f21a4ef" class="avito-link" target="_blank" rel="noopener noreferrer"></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Услуги</h4>
+                <ul>
+                    <li><a href="#">Отделка домов</a></li>
+                    <li><a href="#">Ремонт квартир</a></li>
+                    <li><a href="#">Фундамент</a></li>
+                    <li><a href="#">Тёплый пол</a></li>
+                    <li><a href="#">Дизайн-проекты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                    <li><a href="#" data-contacts onclick="window.openContacts(event)">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+79005633555">+7 (900) 563-35-55</a></li>
+                    <li><a href="mailto:profivdele4@gmail.com">profivdele4@gmail.com</a></li>
+                    <li><a href="#">Калининград</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Профи в Деле. Все права защищены.</p>
+            <p>Работаем по договору. НДС не облагается.</p>
+        </div>
+    </footer>
+</div>
+
+<div class="contacts-overlay" id="contactsOverlay">
+  <div class="contacts-modal" id="contactsModal">
+    <button class="contacts-close" id="contactsClose"><i class="fa-solid fa-xmark"></i></button>
+    <div class="contacts-body">
+      <div class="contacts-header">
+        <div class="contacts-badge"><i class="fa-solid fa-building"></i></div>
+        <h2 class="contacts-title">Наш офис</h2>
+      </div>
+      <div class="contacts-card">
+        <div class="contacts-row">
+          <div class="contacts-icon-box loc"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contacts-text">
+            <span class="contacts-label">Город</span>
+            <span class="contacts-value">Калининград</span>
+          </div>
+        </div>
+        <div class="contacts-map"><i class="fa-solid fa-map"></i> <span>Калининград, Россия</span></div>
+      </div>
+      <a href="tel:+79005633555" class="contacts-card contacts-link">
+        <div class="contacts-row">
+          <div class="contacts-icon-box ph"><i class="fa-solid fa-phone"></i></div>
+          <div class="contacts-text">
+            <span class="contacts-label">Телефон</span>
+            <span class="contacts-value">+7 (900) 563-35-55</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square contacts-ext"></i>
+        </div>
+        <div class="contacts-desc">Звоните — проконсультируем, рассчитаем стоимость, запишем на замер.</div>
+      </a>
+      <a href="mailto:profivdele4@gmail.com" class="contacts-card contacts-link">
+        <div class="contacts-row">
+          <div class="contacts-icon-box mail"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contacts-text">
+            <span class="contacts-label">Email</span>
+            <span class="contacts-value">profivdele4@gmail.com</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square contacts-ext"></i>
+        </div>
+        <div class="contacts-desc">Присылайте планировку и пожелания — ответим в течение часа.</div>
+      </a>
+      <div class="contacts-card">
+        <div class="contacts-row">
+          <div class="contacts-icon-box time"><i class="fa-solid fa-clock"></i></div>
+          <div class="contacts-text">
+            <span class="contacts-label">График работы</span>
+            <span class="contacts-value">Пн–Вс: 08:00–20:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+        <button class="mobile-menu-close" id="mobileMenuClose"><i class="fa-solid fa-xmark"></i></button>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a class="btn" href="#" data-contacts onclick="window.openContacts(event)">Контакты</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+const saved = localStorage.getItem('theme');
+function applyTheme(dark) {
+    const html = document.documentElement;
+    if (dark) { html.setAttribute('data-theme', 'dark'); document.querySelectorAll('.theme-toggle').forEach(function(b) { b.innerHTML = '<i class="fa-regular fa-sun"></i>'; }); }
+    else { html.removeAttribute('data-theme'); document.querySelectorAll('.theme-toggle').forEach(function(b) { b.innerHTML = '<i class="fa-regular fa-moon"></i>'; }); }
+}
+if (saved === 'dark') applyTheme(true);
+document.querySelectorAll('.theme-toggle').forEach(function(btn) { btn.addEventListener('click', function() { var d = document.documentElement.getAttribute('data-theme') === 'dark'; applyTheme(!d); localStorage.setItem('theme', d ? 'light' : 'dark'); }); });
+
+const header = document.getElementById('header');
+let lastScroll = 0;
+window.addEventListener('scroll', function() {
+    const current = window.scrollY;
+    header.classList.toggle('scrolled', current > 50);
+    if (current > 100) {
+        header.classList.toggle('header-hidden', current > lastScroll);
+    } else {
+        header.classList.remove('header-hidden');
+    }
+    lastScroll = current;
+});
+
+const burgerToggle = document.getElementById('burgerToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+if (burgerToggle && mobileMenu) {
+    burgerToggle.addEventListener('click', function() { mobileMenu.classList.toggle('active'); document.body.classList.toggle('no-scroll'); });
+    mobileMenuClose.addEventListener('click', function() { mobileMenu.classList.remove('active'); document.body.classList.remove('no-scroll'); });
+    mobileMenu.addEventListener('click', function(e) { if (e.target === mobileMenu) { mobileMenu.classList.remove('active'); document.body.classList.remove('no-scroll'); } });
+}
+
+window.openContacts = function(e) { e.preventDefault(); var o = document.getElementById('contactsOverlay'); if (o) { o.classList.add('active'); document.body.classList.add('no-scroll'); } var m = document.getElementById('mobileMenu'); if (m && m.classList.contains('active')) { m.classList.remove('active'); document.body.classList.remove('no-scroll'); } };
+document.addEventListener('DOMContentLoaded', function() {
+    var overlay = document.getElementById('contactsOverlay'), closeBtn = document.getElementById('contactsClose');
+    if (!overlay) return;
+    document.querySelectorAll('[data-contacts]').forEach(function(el) { el.addEventListener('click', window.openContacts); });
+    if (closeBtn) closeBtn.addEventListener('click', function() { overlay.classList.remove('active'); document.body.classList.remove('no-scroll'); });
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) { overlay.classList.remove('active'); document.body.classList.remove('no-scroll'); } });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) { overlay.classList.remove('active'); document.body.classList.remove('no-scroll'); } });
+});
+
+function animateCounters() {
+    document.querySelectorAll('.counter').forEach(function(counter) {
+        var target = parseFloat(counter.getAttribute('data-target')), startTime = null;
+        function step(ts) { if (!startTime) startTime = ts; var p = Math.min((ts - startTime) / 2000, 1), e = 1 - Math.pow(1 - p, 3), c = e * target; counter.textContent = target % 1 === 0 ? Math.floor(c) : c.toFixed(1); if (p < 1) requestAnimationFrame(step); else counter.textContent = target % 1 === 0 ? Math.floor(target) : target.toFixed(1); }
+        requestAnimationFrame(step);
+    });
+}
+
+function observeFadeUp() {
+    var observer = new IntersectionObserver(function(entries) { entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+}
+
+document.addEventListener('DOMContentLoaded', function() { observeFadeUp(); animateCounters(); });
+</script>
+
+</body>
+</html>
