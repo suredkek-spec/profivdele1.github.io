@@ -151,7 +151,7 @@ header nav ul li a:hover { color: var(--text); background: var(--accent-dim); }
 header nav ul li a.active { color: var(--accent); }
 header nav ul li a.btn {
     background: var(--accent);
-    color: #fff;
+    color: #000;
     padding: 8px 20px;
     border-radius: 8px;
     font-weight: 600;
@@ -522,8 +522,8 @@ header nav ul li a.btn:hover {
     background: linear-gradient(135deg, var(--accent-dim), transparent);
     opacity: 0; transition: var(--transition);
 }
-.service-card:hover { border-color: rgba(0, 230, 118, 0.2); transform: translateY(-6px); box-shadow: 0 8px 40px rgba(0, 230, 118, 0.08); }
-.service-card:hover::after { opacity: 1; }
+.service-card:hover { border-color: rgba(0, 230, 118, 0.15); transform: translateY(-6px); box-shadow: 0 8px 40px rgba(0, 230, 118, 0.04); }
+.service-card:hover::after { opacity: 0.5; }
 .service-card > * { position: relative; z-index: 1; }
 
 /* Cards with background images */
@@ -552,7 +552,7 @@ header nav ul li a.btn:hover {
     transition: var(--transition);
 }
 .service-card-bg:hover .service-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0, 230, 118, 0.15) 50%, rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0, 230, 118, 0.08) 50%, rgba(0,0,0,0.3) 100%);
 }
 .service-content {
     position: relative;
@@ -569,6 +569,9 @@ header nav ul li a.btn:hover {
 }
 .service-card-bg .service-content p {
     flex: 1;
+    background: color-mix(in srgb, var(--bg-card) 60%, transparent);
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 .service-card-bg .service-content .service-tag {
     margin-top: auto;
